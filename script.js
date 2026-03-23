@@ -25,60 +25,59 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('modalTitle');
     const modalBody = document.getElementById('modalBody');
 
-    // Dados dos projetos
+    // Dados dos projetos (Dados ilustrativos para os 4 primeiros)
     const projectsData = {
         projeto1: {
             title: "Otimização de Layout de CD - Magazine Luiza",
             content: `
-                <p><strong>Desafio:</strong> Otimizar o layout de um Centro de Distribuição de 55 mil m³ para aumentar a eficiência da área de picking e garantir o fluxo adequado de produtos. </p>
-                <p><strong>Minha Contribuição:</strong> Implementei mudanças estratégicas no layout, utilizei a ferramenta KANBAN para assegurar o abastecimento correto das áreas de picking e realizei análises de giros dos produtos (Curva ABC) para otimizar os endereços de armazenagem. </p>
-                <p><strong>Resultados:</strong> Aumentei a eficiência do processo de separação de pedidos, reduzindo o tempo de picking e garantindo que não houvesse divergências sistêmicas no cadastro e endereçamento de produtos. </p>
-                <p><strong>Ferramentas:</strong> Power BI para dashboards de acompanhamento, Excel para análises detalhadas, sistemas WMS e ORACLE para gestão de estoque. </p>
-                <img src="assets/Indicador - Ocupação.jpeg" alt="Dashboard de Eficiência">
+                <p><strong>Desafio:</strong> Otimizar o layout de 55 mil m³ para reduzir o tempo de deslocamento operacional.</p>
+                <p><strong>Resultados Ilustrativos:</strong> Redução de 15% no tempo médio de picking e aumento de 10% na capacidade de armazenamento.</p>
+                <p><strong>Ferramentas:</strong> KANBAN, Curva ABC, AutoCAD e WMS.</p>
+                <img src="assets/Indicador - Ocupação.jpeg" alt="Layout">
             `
         },
         projeto2: {
             title: "Análise de Indicadores Logísticos com Power BI/SQL",
             content: `
-                <p><strong>Desafio:</strong> Fornecer visibilidade e insights acionáveis sobre os indicadores do setor de recebimento, controle de estoque e suprimentos para apoiar análises gerenciais. </p>
-                <p><strong>Minha Contribuição:</strong> Fui responsável pela atualização diária desses indicadores, transformando dados brutos em informações compreensíveis para a diretoria. Participei ativamente de reuniões para apresentar os resultados, dados e propor melhorias eficientes. </p>
-                <p><strong>Resultados:</strong> Melhorei a tomada de decisão da equipe gerencial, identificando gargalos e oportunidades de otimização nos processos logísticos. </p>
-                <p><strong>Ferramentas:</strong> SQL para extração e manipulação de grandes volumes de dados , Power BI para criação de dashboards dinâmicos , Excel para análises complementares e simulações. </p>
-                <img src="assets/Indicador - Bloqueio PowerBi.jpeg" alt="Indicador de Bloqueio">
+                <p><strong>Desafio:</strong> Automatizar o acompanhamento de metas diárias de recebimento.</p>
+                <p><strong>Resultados Ilustrativos:</strong> Economia de 2 horas diárias de trabalho manual e acuracidade de estoque elevada para 99.8%.</p>
+                <p><strong>Ferramentas:</strong> SQL Server, Power BI e Google Data Studio.</p>
+                <img src="assets/Indicador - Bloqueio PowerBi.jpeg" alt="Dashboard">
             `
         },
         projeto3: {
             title: "Controle Orçamentário e Gestão de Fornecedores",
             content: `
-                <p><strong>Desafio:</strong> Gerenciar o controle orçamentário e financeiro de diversos serviços essenciais, além de otimizar o relacionamento com fornecedores. </p>
-                <p><strong>Minha Contribuição:</strong> Responsável pelo controle orçamentário de compras e pagamentos de serviços como energia, água, fretado, manutenção predial e refeição. Mantinha contato direto com todos os fornecedores para garantir a qualidade e a conformidade dos serviços. </p>
-                <p><strong>Resultados:</strong> Contribuí para uma gestão mais eficiente dos recursos, identificando oportunidades de otimização de custos e garantindo a continuidade dos serviços essenciais. </p>
-                <p><strong>Ferramentas:</strong> Excel para controle orçamentário e projeções, sistemas AUTOMIDIA e ORACLE para gestão de pagamentos e fornecedores. </p>
-                <img src="assets/Indicador Financeiro.jpg" alt="Controle Financeiro">
+                <p><strong>Desafio:</strong> Centralizar o controle de pagamentos de utilidades (água, luz e fretados).</p>
+                <p><strong>Resultados Ilustrativos:</strong> Identificação de 5% de redução de custos fixos através de auditoria de contratos e faturas.</p>
+                <p><strong>Ferramentas:</strong> Excel Avançado e SAP ERP.</p>
+                <img src="assets/Indicador Financeiro.jpg" alt="Financeiro">
             `
         },
         projeto4: {
             title: "Implantação de Equipamentos e Processos FULFILLMENT",
             content: `
-                <p><strong>Atuação:</strong> Na implantação de equipamentos e estruturas para armazenagem de produtos FULFILLMENT e domínio dos processos logísticos relacionados a fornecedores parceiros (FULFILLMENT). </p>
-                <img src="assets/Indicador - Full.jpeg" alt="Indicador Full">
+                <p><strong>Desafio:</strong> Implementar a infraestrutura para operações de parceiros externos.</p>
+                <p><strong>Resultados Ilustrativos:</strong> Setup completo de 20 novos postos de trabalho e 100% de conformidade nos processos de auditoria logística.</p>
+                <p><strong>Ferramentas:</strong> WMS Oracle e Gestão de Projetos.</p>
+                <img src="assets/Indicador - Full.jpeg" alt="Fulfillment">
             `
         },
         agendelogo: {
             title: "Agende Logo",
             content: `
-                <p><strong>Website:</strong> <a href="https://agendelogo.com/" target="_blank">agendelogo.com</a></p>
+                <p><strong>Site:</strong> <a href="https://agendelogo.com/" target="_blank">agendelogo.com</a></p>
                 <p><strong>Instagram:</strong> <a href="https://www.instagram.com/agende_logo/" target="_blank">@agende_logo</a></p>
-                <p><strong>Descrição:</strong> Plataforma especializada em soluções de agendamento online e criação de identidade visual personalizada para empresas.</p>
+                <p>Plataforma dedicada a soluções de agendamento e branding.</p>
                 <img src="assets/Insta_Agendelogo.png" alt="Agende Logo">
             `
         },
         eloeterno: {
             title: "Elo Eterno",
             content: `
-                <p><strong>Website:</strong> <a href="https://eloeterno.com/" target="_blank">eloeterno.com</a></p>
+                <p><strong>Site:</strong> <a href="https://eloeterno.com/" target="_blank">eloeterno.com</a></p>
                 <p><strong>Instagram:</strong> <a href="https://www.instagram.com/elo_eterno.ofic/" target="_blank">@elo_eterno.ofic</a></p>
-                <p><strong>Descrição:</strong> Projeto inovador focado na preservação de memórias digitais e conexões significativas por meio de tecnologia avançada.</p>
+                <p>Tecnologia voltada para a eternização de memórias.</p>
                 <img src="assets/Insta_eloeterno.png" alt="Elo Eterno">
             `
         }
@@ -91,43 +90,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if (project) {
                 modalTitle.textContent = project.title;
                 modalBody.innerHTML = project.content;
-                projectModal.style.display = 'flex';
+                projectModal.classList.add('active'); // Usar classe para controlar visibilidade
             }
         });
     });
 
     closeButton.addEventListener('click', () => {
-        projectModal.style.display = 'none';
+        projectModal.classList.remove('active');
     });
 
     window.addEventListener('click', (event) => {
         if (event.target === projectModal) {
-            projectModal.style.display = 'none';
+            projectModal.classList.remove('active');
         }
     });
-
-    // Animação de barras de progresso ao scroll
-    const skillBars = document.querySelectorAll('.progress-fill');
-    const skillsSection = document.getElementById('skills');
-
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                skillBars.forEach(bar => {
-                    // O CSS já define a largura final, o JS só aciona a transição
-                });
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    if (skillsSection) {
-        observer.observe(skillsSection);
-    }
 });
