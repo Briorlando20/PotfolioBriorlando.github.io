@@ -18,6 +18,28 @@
     box-sizing: border-box;
 }
 
+/* Adicione isso ao seu style.css se não houver */
+.modal-footer-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-footer-links .btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+.secondary i {
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .modal-content { width: 95%; padding: 20px; }
+    .modal-footer-links { flex-direction: column; }
+}
+
 body {
     font-family: var(--font-family);
     line-height: 1.6;
