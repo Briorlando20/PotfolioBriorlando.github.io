@@ -1,69 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Menu
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
+    hamburger.onclick = () => { navLinks.classList.toggle('active'); hamburger.classList.toggle('active'); };
 
+    // Modal logic
     const projectModal = document.getElementById('projectModal');
     const closeButton = document.querySelector('.close-button');
-    const projectDetailButtons = document.querySelectorAll('.project-detail-btn');
     const modalTitle = document.getElementById('modalTitle');
     const modalBody = document.getElementById('modalBody');
 
     const projectsData = {
-        projeto1: {
-            title: "Otimização de Layout de CD - Magazine Luiza",
-            content: `
-                <p><strong>Desafio:</strong> Otimizar o layout de 55 mil m³ para aumentar a eficiência da área de picking[cite: 96]. </p>
-                <p><strong>Ações:</strong> Implementação de KANBAN e Curva ABC para otimização de endereços de armazenagem[cite: 96]. </p>
-            `
+        projeto1: { title: "Layout CD Magalu", content: "<p>Gestão de 55 mil m² focada em picking e KANBAN.</p>" },
+        projeto2: { title: "Power BI & SQL", content: "<p>Análise de indicadores e malha fiscal.</p>" },
+        agendelogo: { 
+            title: "Agende Logo [cite: 100]", 
+            content: "<p>Automação de reservas 24/7 e dashboards de performance[cite: 102]. Tecnologia LLM para triagem via IA[cite: 103].</p>" 
         },
-        projeto2: {
-            title: "Análise de Indicadores Logísticos com Power BI/SQL",
-            content: `
-                <p><strong>Desafio:</strong> Fornecer visibilidade sobre indicadores de recebimento e estoque[cite: 85]. </p>
-                <p><strong>Código SQL Exemplo:</strong></p>
-                <pre><code>SELECT A.CD_ENDERECO, B.NM_EMPRESA FROM maga-bigdata.wis.t_endereco_estoque A JOIN maga-bigdata.wis.t_empresa B ON A.CD_EMPRESA = B.CD_EMPRESA;</code></pre>
-            `
-        },
-        projeto3: {
-            title: "Controle Orçamentário e Fornecedores",
-            content: `<p>Gestão orçamentária de serviços como energia, água e manutenção predial[cite: 90].</p>`
-        },
-        projeto4: {
-            title: "Implantação de Processos FULFILLMENT",
-            content: `<p>Implantação de estruturas para armazenagem Fulfillment e gestão de processos com fornecedores parceiros[cite: 97].</p>`
-        },
-        agendelogo: {
-            title: "Agende Logo | Founder & Developer",
-            content: `
-                <p><strong>Solução:</strong> Gestão de Fluxo Inteligente para resolver ociosidade de profissionais[cite: 101].</p>
-                <p><strong>IA:</strong> Automação de atendimento via LLM e análise preditiva de no-shows[cite: 103, 104].</p>
-            `
-        },
-        eloeterno: {
-            title: "Elo eterno | Arquiteto de Soluções",
-            content: `
-                <p><strong>Solução:</strong> Memoriais digitais interativos integrados via QR Code[cite: 107].</p>
-                <p><strong>IA:</strong> Uso de IA Generativa para estruturação de narrativas biográficas[cite: 108].</p>
-            `
+        eloeterno: { 
+            title: "Elo Eterno [cite: 105]", 
+            content: "<p>Memoriais digitais interativos acessíveis via QR Code[cite: 107]. IA Generativa para narrativas biográficas[cite: 108].</p>" 
         }
     };
 
-    projectDetailButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const projectId = button.dataset.projectId;
-            const project = projectsData[projectId];
-            if (project) {
-                modalTitle.textContent = project.title;
-                modalBody.innerHTML = project.content;
-                projectModal.style.display = 'flex';
+    document.querySelectorAll('.project-detail-btn').forEach(btn => {
+        btn.onclick = () => {
+            const data = projectsData[btn.dataset.projectId];
+            if (data) {
+                modalTitle.innerText = data.title;
+                modalBody.innerHTML = data.content;
+                projectModal.style.display = 'flex'; // Só aparece ao clicar
             }
-        });
+        };
     });
 
-    closeButton.addEventListener('click', () => { projectModal.style.display = 'none'; });
-    window.addEventListener('click', (event) => { if (event.target === projectModal) projectModal.style.display = 'none'; });
+    closeButton.onclick = () => projectModal.style.display = 'none';
+    window.onclick = (e) => { if (e.target == projectModal) projectModal.style.display = 'none'; };
 });
