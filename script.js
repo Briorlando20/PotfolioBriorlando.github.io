@@ -63,17 +63,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    projectDetailButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const projectId = button.dataset.projectId;
-            const project = projectsData[projectId];
-            if (project) {
-                modalTitle.textContent = project.title;
-                modalBody.innerHTML = project.content;
-                projectModal.style.display = 'flex';
-            }
-        });
+projectDetailButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const projectId = button.dataset.projectId;
+        const project = projectsData[projectId];
+        if (project) {
+            modalTitle.textContent = project.title;
+            modalBody.innerHTML = project.content;
+            
+            // Esta linha abaixo deve estar exatamente aqui, 
+            // para só abrir quando houver um clique:
+            projectModal.style.display = 'flex'; 
+        }
     });
+});
 
     closeButton.addEventListener('click', () => { projectModal.style.display = 'none'; });
     window.addEventListener('click', (event) => { if (event.target === projectModal) projectModal.style.display = 'none'; });
