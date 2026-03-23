@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><strong>Destaque:</strong> Redução drástica de no-shows através de lembretes inteligentes.</p>
                 <hr>
                 <p><a href="https://agendelogo.com/" target="_blank" class="btn primary">Acessar Site Oficial</a></p>
-                <p><a href="https://www.instagram.com/agende_logo/" target="_blank" style="color: #E1306C;"><i class="fab fa-instagram"></i> Siga no Instagram</a></p>
+                <p><a href="https://www.instagram.com/agendelogo/" target="_blank" style="color: #E1306C;"><i class="fab fa-instagram"></i> Siga no Instagram</a></p>
             `
         },
         eloeterno: {
