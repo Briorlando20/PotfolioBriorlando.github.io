@@ -1,28 +1,98 @@
-<div class="projects-grid">
-    <div class="project-card">
-        <img src="assets/agendelogo-thumb.jpg" alt="Agende Logo">
-        <h3>Agende Logo - Gestão Inteligente</h3>
-        <p>Plataforma de agendamento 24/7 com uso de IA para redução de faltas e otimização de fluxo de clientes.</p>
-        <div class="project-links" style="margin: 0 20px 10px; display: flex; gap: 10px;">
-            <button class="btn project-detail-btn" data-project-id="agendelogo">Detalhes Técnicos</button>
-            <a href="https://www.instagram.com/agendelogo" target="_blank" class="btn secondary"><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Briorlando | Portfólio de Logística e Análise de Dados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
 
-    <div class="project-card">
-        <img src="assets/eloeterno-thumb.jpg" alt="ELOeterno">
-        <h3>ELOeterno - Legado Digital</h3>
-        <p>Ecossistema que une QR Codes físicos a memoriais digitais interativos e curadoria por IA.</p>
-        <div class="project-links" style="margin: 0 20px 10px; display: flex; gap: 10px;">
-            <button class="btn project-detail-btn" data-project-id="eloeterno">Detalhes Técnicos</button>
-            <a href="https://www.instagram.com/eloeterno" target="_blank" class="btn secondary"><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="#home" class="logo">Gustavo Briorlando</a>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#experience">Experiência</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#education">Formação</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
-    <div class="project-card">
-        <img src="assets/Indicador - Ocupação.jpeg" alt="Projeto CD Magazine Luiza">
-        <h3>Otimização de Layout de CD - Magazine Luiza</h3>
-        <p>Responsável pela gestão de estoque e layout de um CENTRO DE DISTRIBUIÇÃO de 55 mil m³.</p>
-        <button class="btn project-detail-btn" data-project-id="projeto1">Ver Detalhes</button>
-    </div>
-    </div>
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <img src="Minha foto_Social.jpeg" alt="Gustavo Briorlando" class="profile-pic">
+            <h1>GUSTAVO BRIORLANDO FLORINDO MARTINS BARBOSA</h1>
+            <p class="tagline">Analista de Logística Pleno | Desenvolvedor de Sistemas (ADS)</p>
+            <p class="bio-short">Perfil profissional analítico, dedicado e comunicativo[cite: 5]. Focado em desenvolver habilidades e executar serviços com zelo e responsabilidade[cite: 6], unindo logística avançada e tecnologia com IA.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">Ver Meus Projetos</a>
+                <a href="assets/CURRICULO_GUSTAVO_BRIORLANDO.pdf" download class="btn primary">Baixar Currículo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Meus Projetos em Destaque</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <img src="assets/agendelogo-thumb.jpg" alt="Agende Logo">
+                <h3>Agende Logo - Gestão Inteligente</h3>
+                <p>Plataforma de gestão de fluxo e agendamento 24/7 com uso de IA para redução de no-shows[cite: 101, 104].</p>
+                <div style="margin: 0 20px 20px; display: flex; gap: 10px;">
+                    <button class="btn project-detail-btn" data-project-id="agendelogo">Ver Detalhes</button>
+                    <a href="https://www.instagram.com/agendelogo" target="_blank" class="btn secondary"><i class="fab fa-instagram"></i> Insta</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/eloeterno-thumb.jpg" alt="ELOeterno">
+                <h3>ELOeterno - Legado Digital</h3>
+                <p>Ecossistema de preservação de memória via QR Code e narrativas personalizadas por IA Generativa[cite: 107, 108].</p>
+                <div style="margin: 0 20px 20px; display: flex; gap: 10px;">
+                    <button class="btn project-detail-btn" data-project-id="eloeterno">Ver Detalhes</button>
+                    <a href="https://www.instagram.com/eloeterno" target="_blank" class="btn secondary"><i class="fab fa-instagram"></i> Insta</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/Indicador - Ocupação.jpeg" alt="Projeto CD Magazine Luiza">
+                <h3>Otimização de Layout de CD - Magazine Luiza</h3>
+                <p>Gestão de estoque e layout em CD de 55 mil m², focado na eficiência da separação[cite: 96].</p>
+                <button class="btn project-detail-btn" data-project-id="projeto1">Ver Detalhes</button>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/Indicador - Bloqueio PowerBi.jpeg" alt="Dashboard de Análise">
+                <h3>Análise de Indicadores Logísticos com Power BI/SQL</h3>
+                <p>Criação de indicadores de recebimento e estoque para suporte às análises gerenciais[cite: 85, 98].</p>
+                <button class="btn project-detail-btn" data-project-id="projeto2">Ver Detalhes</button>
+            </div>
+        </div>
+
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Gustavo Briorlando. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
