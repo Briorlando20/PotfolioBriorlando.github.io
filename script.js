@@ -15,27 +15,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectsData = {
         projeto1: { 
             title: "Otimização de Layout de CD", 
-            content: "Desafio: Otimizar o layout de 55 mil m³. Resultados Ilustrativos: Redução de 15% no tempo de picking e aumento de 10% na capacidade de armazenamento." 
+            content: "Desafio: Otimizar o layout de 55 mil m³ para reduzir o tempo de deslocamento operacional. Resultados Ilustrativos: Redução de 15% no tempo médio de picking e aumento de 10% na capacidade de armazenamento. Ferramentas: KANBAN, Curva ABC, AutoCAD e WMS." 
         },
         projeto2: { 
             title: "Análise com Power BI/SQL", 
-            content: "Desafio: Automatizar indicadores de recebimento. Resultados Ilustrativos: Economia de 2 horas diárias e acuracidade elevada para 99.8%." 
+            content: "Desafio: Automatizar o acompanhamento de metas diárias de recebimento. Resultados Ilustrativos: Economia de 2 horas diárias de trabalho manual e acuracidade de estoque elevada para 99.8%. Ferramentas: SQL Server, Power BI e Google Data Studio." 
         },
         projeto3: { 
             title: "Controle Orçamentário", 
-            content: "Desafio: Centralizar pagamentos de utilidades. Resultados Ilustrativos: Identificação de 5% de redução de custos fixos através de auditoria." 
+            content: "Desafio: Centralizar o controle de pagamentos de utilidades (água, luz e fretados). Resultados Ilustrativos: Identificação de 5% de redução de custos fixos através de auditoria de contratos e faturas. Ferramentas: Excel Avançado e SAP ERP." 
         },
         projeto4: { 
             title: "Implantação Fulfillment", 
-            content: "Desafio: Implementar infraestrutura para parceiros. Resultados Ilustrativos: Setup de 20 novos postos e 100% de conformidade em auditorias." 
+            content: "Desafio: Implementar a infraestrutura para operações de parceiros externos. Resultados Ilustrativos: Setup completo de 20 novos postos de trabalho e 100% de conformidade nos processos de auditoria logística. Ferramentas: WMS Oracle e Gestão de Projetos." 
         },
         agendelogo: { 
             title: "Agende Logo", 
-            content: "Website: agendelogo.com. Soluções inteligentes de agendamento e branding visual para empresas." 
+            content: "Site: agendelogo.com. Instagram: @agende_logo. Plataforma especializada em soluções inteligentes de agendamento online e criação de identidade visual personalizada para empresas." 
         },
         eloeterno: { 
             title: "Elo Eterno", 
-            content: "Website: eloeterno.com. Tecnologia voltada para a preservação de memórias digitais e legados." 
+            content: "Site: eloeterno.com. Instagram: @elo_eterno.ofic. Projeto inovador focado na preservação de memórias digitais e conexões significativas por meio de tecnologia avançada." 
         }
     };
 
