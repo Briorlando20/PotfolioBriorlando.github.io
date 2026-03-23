@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        /* Bloqueia o flash branco inicial definindo a cor de fundo no nível mais alto */
+        /* CORREÇÃO DO QUADRADO BRANCO: Fundo escuro imediato */
         html, body { background-color: #000017 !important; margin: 0; padding: 0; }
+        
+        /* Garante que o modal comece invisível */
+        #projectModal { display: none; }
     </style>
 </head>
 <body>
@@ -25,9 +28,7 @@
                 <li><a href="#contact">Contato</a></li>
             </ul>
             <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </div>
         </nav>
     </header>
@@ -37,38 +38,10 @@
             <img src="Minha foto_Social.jpeg" alt="Gustavo Briorlando" class="profile-pic">
             <h1>GUSTAVO BRIORLANDO FLORINDO MARTINS BARBOSA</h1>
             <p class="tagline">Especialista em Logística e Análise de Dados</p>
-            <p class="bio-short">Perfil profissional analítico, dedicado, ativo e comunicativo[cite: 5]. Tendo como objetivo desenvolver habilidades, procurando sempre buscar o aperfeiçoamento e executando seus serviços com zelo e senso de responsabilidade[cite: 6]. </p>
+            <p class="bio-short">Perfil profissional analítico, dedicado, ativo e comunicativo[cite: 5]. Objetivo de desenvolver habilidades e executar serviços com zelo e responsabilidade[cite: 6].</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn primary">Ver Meus Projetos</a>
                 <a href="assets/CURRICULO_GUSTAVO_BRIORLANDO.pdf" download class="btn primary">Baixar Currículo</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <h2>Sobre Mim</h2>
-        <p>Com uma sólida formação em Logística e um MBA em Gestão Avançada pela Unigranrio [cite: 10, 12], busco incessantemente o aprimoramento contínuo em minhas habilidades e a execução de meus serviços com zelo e responsabilidade[cite: 6]. Minha trajetória profissional me proporcionou expertise em otimização de processos, gestão de estoque e análise de dados, sempre com um perfil analítico e comunicativo[cite: 5].</p>
-        <h3>Meus Atributos Chave</h3>
-        <div class="key-attributes">
-            <div class="attribute-card">
-                <i class="fas fa-chart-line"></i>
-                <h4>Analítico</h4>
-                <p>Capacidade de analisar dados complexos para identificar problemas e propor soluções.</p>
-            </div>
-            <div class="attribute-card">
-                <i class="fas fa-handshake"></i>
-                <h4>Comunicativo</h4>
-                <p>Facilidade em apresentar resultados e interagir com diferentes equipes e fornecedores.</p>
-            </div>
-            <div class="attribute-card">
-                <i class="fas fa-bolt"></i>
-                <h4>Ativo e Dedicado</h4>
-                <p>Proatividade na busca por melhorias e comprometimento com os objetivos.</p>
-            </div>
-            <div class="attribute-card">
-                <i class="fas fa-lightbulb"></i>
-                <h4>Solução de Problemas</h4>
-                <p>Habilidade em identificar e resolver desafios de forma eficiente e inovadora.</p>
             </div>
         </div>
     </section>
@@ -82,10 +55,9 @@
                     <h3>Analista de Logística PLENO - Magazine Luiza</h3>
                     <p class="period">01/07/2024 até o momento [cite: 95]</p>
                     <ul>
-                        <li>Responsável pela gestão de estoque e layout de um CENTRO DE DISTRIBUIÇÃO com 55 mil m³, focado na eficiência da separação[cite: 96]. </li>
-                        <li>Utilização da ferramenta KANBAN e análise de giros dos produtos (CURVA ABC) para otimização de endereços e recebimento[cite: 96]. </li>
-                        <li>Atuação na implantação de equipamentos e estruturas para produtos FULFILLMENT e domínio dos processos logísticos com fornecedores parceiros (FULFILLMENT)[cite: 97]. </li>
-                        <li>Alto grau de conhecimento em Excel, Data Studio, PowerPoint, Power BI, SQL, BigQuery e banco de dados extraídos do sistema[cite: 98]. </li>
+                        <li>Gestão de estoque e layout de CD com 55 mil m³ e uso de KANBAN[cite: 96].</li>
+                        <li>Implantação de estruturas FULFILLMENT[cite: 97].</li>
+                        <li>Domínio de Excel, Power BI, SQL e BigQuery[cite: 98].</li>
                     </ul>
                 </div>
             </div>
@@ -95,14 +67,9 @@
                     <h3>Analista de Logística JUNIOR - Magazine Luiza</h3>
                     <p class="period">01/02/2023 até 01/07/2024 [cite: 84]</p>
                     <ul>
-                        <li>Controle de estoque, Recebimento e Suprimentos: Atualização diária de indicadores do setor de recebimento, controle de estoque e suprimentos, passando os resultados para análises gerenciais[cite: 85]. </li>
-                        <li>Responsabilidade de participar de reuniões com outros setores da empresa para apresentação dos dados, resultados e propostas de melhorias eficientes para serem implantadas[cite: 86]. </li>
-                        <li>Tenho conhecimento na malha fiscal, onde consiste em fazer as tratativas dos saldos dos produtos entre CD´s, Filiais, Fornecedores e Transportadoras[cite: 87]. </li>
-                        <li>Monitoramento do inventário rotativo em um estoque com mais de 1 milhão de volume e mais de 30 mil endereços[cite: 88]. </li>
-                        <li>Responsável direto pela apresentação do FOLLOWUP do fechamento do ciclo do inventário para a diretoria e prevenção de perdas da companhia[cite: 88]. </li>
-                        <li>Responsável pelo monitoramento do valor do bloqueio técnicos (Avarias, faltas e sobras) dos itens da operação e controle do shelf life (produtos de validades)[cite: 88]. </li>
-                        <li>Financeiro: Controle orçamentário de compras e pagamentos dos serviços de energia, água, fretado, manutenção predial, manutenção de equipamentos, refeição[cite: 90]. </li>
-                        <li>Sistemas utilizados: WMS, GEMCO, TABLEAU, AUTOMIDIA E ORACLE[cite: 92]. </li>
+                        <li>Atualização de indicadores e participação em reuniões gerenciais[cite: 85, 86].</li>
+                        <li>Monitoramento de inventário rotativo (>1 milhão de volumes) e FOLLOWUP de perdas[cite: 88].</li>
+                        <li>Controle orçamentário e financeiro (energia, manutenção, etc.)[cite: 90].</li>
                     </ul>
                 </div>
             </div>
@@ -111,9 +78,7 @@
                 <div class="timeline-content">
                     <h3>Assistente Administrativo III - Magazine Luiza</h3>
                     <p class="period">01/04/2022 até 01/02/2023 [cite: 80]</p>
-                    <ul>
-                        <li>Responsável pelo setor de suprimentos, controle de estoque (CTE) e Recebimento do centro de distribuição da Magazine Luiza[cite: 81]. </li>
-                    </ul>
+                    <ul><li>Responsável por suprimentos, estoque (CTE) e recebimento[cite: 81].</li></ul>
                 </div>
             </div>
             <div class="timeline-item">
@@ -122,9 +87,8 @@
                     <h3>Assistente Administrativo II - Magazine Luiza</h3>
                     <p class="period">14/10/2020 até 31/03/2022 [cite: 73]</p>
                     <ul>
-                        <li>Responsável pelo setor de suprimentos e controle de estoque (CTE) do centro de distribuição da Magazine Luiza[cite: 74]. </li>
-                        <li>Responsável pelos abastecimentos de suprimentos para mais de 70 filiais em território do Rio de Janeiro e Espírito Santo[cite: 76]. </li>
-                        <li>Análise e controle de NF'S gerada para pagamentos de acordo com o produto comprado[cite: 77]. </li>
+                        <li>Abastecimento de suprimentos para mais de 70 filiais (RJ e ES)[cite: 76].</li>
+                        <li>Análise e controle de NF's para pagamentos[cite: 77].</li>
                     </ul>
                 </div>
             </div>
@@ -134,53 +98,9 @@
                     <h3>Jovem Aprendiz - Marcopolo Rio S.A</h3>
                     <p class="period">07/2018 a 07/2020 [cite: 68]</p>
                     <ul>
-                        <li>Auxiliar de operações Logística[cite: 67]. </li>
-                        <li>Responsável por planejar e controlar a linha de produção tendo ênfase nas peças fabricadas internamente e compradas junto aos fornecedores[cite: 69]. </li>
-                        <li>Sistema utilizado: SAP[cite: 70]. </li>
+                        <li>Planejamento e controle da linha de produção via SAP[cite: 69, 70].</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills-section">
-        <h2>Minhas Habilidades e Ferramentas</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fas fa-file-excel"></i>
-                <h3>Excel</h3>
-                <p>Avançado, Nível Impressionador, Básico ao Avançado, para Especialistas[cite: 31, 34, 37, 40]. </p>
-                <div class="progress-bar"><div class="progress-fill excel" style="width: 95%;"></div></div>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-database"></i>
-                <h3>SQL</h3>
-                <p>Nível Impressionador, Analítico, BigQuery[cite: 44, 47, 98]. </p>
-                <div class="progress-bar"><div class="progress-fill sql" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-chart-bar"></i>
-                <h3>Power BI</h3>
-                <p>Nível Impressionador, Básico[cite: 51, 54]. </p>
-                <div class="progress-bar"><div class="progress-fill powerbi" style="width: 90%;"></div></div>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-code"></i>
-                <h3>HTML & CSS</h3>
-                <p>Nível Impressionador[cite: 58]. </p>
-                <div class="progress-bar"><div class="progress-fill htmlcss" style="width: 75%;"></div></div>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-desktop"></i>
-                <h3>Data Studio</h3>
-                <p>Alto grau de conhecimento[cite: 89]. </p>
-                <div class="progress-bar"><div class="progress-fill datastudio" style="width: 85%;"></div></div>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-cogs"></i>
-                <h3>Sistemas ERP/WMS</h3>
-                <p>SAP, WMS, GEMCO, ORACLE[cite: 70, 92]. </p>
-                <div class="progress-bar"><div class="progress-fill erp" style="width: 80%;"></div></div>
             </div>
         </div>
     </section>
@@ -189,49 +109,34 @@
         <h2>Meus Projetos em Destaque</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <img src="assets/Indicador - Ocupação.jpeg" alt="Projeto CD Magazine Luiza">
-                <h3>Otimização de Layout de CD - Magazine Luiza</h3>
-                <p>Responsável pela gestão de estoque e layout de um CD de 55 mil m³, focado na eficiência da separação[cite: 96]. </p>
-                <button class="btn project-detail-btn" data-project-id="projeto1">Ver Detalhes</button>
+                <img src="Indicador - Ocupação.jpeg" alt="Layout Magalu">
+                <h3>Layout de CD - Magalu</h3>
+                <button class="btn project-detail-btn" data-project-id="projeto1">Detalhes</button>
+            </div>
+            <div class="project-card">
+                <img src="Indicador - Bloqueio PowerBi.jpeg" alt="Dashboards">
+                <h3>Dashboards Power BI/SQL</h3>
+                <button class="btn project-detail-btn" data-project-id="projeto2">Detalhes</button>
             </div>
 
             <div class="project-card">
-                <img src="assets/Indicador - Bloqueio PowerBi.jpeg" alt="Dashboard de Análise">
-                <h3>Análise de Indicadores Logísticos com Power BI/SQL</h3>
-                <p>Criação e atualização diária de indicadores de recebimento, controle de estoque e suprimentos[cite: 85]. </p>
-                <button class="btn project-detail-btn" data-project-id="projeto2">Ver Detalhes</button>
-            </div>
-
-            <div class="project-card">
-                <img src="assets/Indicador Financeiro.jpg" alt="Controle Orçamentário">
-                <h3>Controle Orçamentário e Gestão de Fornecedores</h3>
-                <p>Controle orçamentário de compras e pagamentos dos serviços de energia, água e manutenção[cite: 90]. </p>
-                <button class="btn project-detail-btn" data-project-id="projeto3">Ver Detalhes</button>
-            </div>
-
-            <div class="project-card">
-                <img src="assets/Indicador - Full.jpeg" alt="Implantação Fulfillment">
-                <h3>Implantação de Equipamentos e Processos FULFILLMENT</h3>
-                <p>Atuação na implantação de estruturas para armazenagem de produtos FULFILLMENT[cite: 97]. </p>
-                <button class="btn project-detail-btn" data-project-id="projeto4">Ver Detalhes</button>
-            </div>
-
-            <div class="project-card">
-                <img src="assets/Insta_Agendelogo.png" alt="Agende Logo">
-                <h3>Agende Logo - Gestão de Fluxo</h3>
-                <p>Plataforma de Agendamento Inteligente com uso de IA[cite: 101, 103].</p>
-                <div style="margin: 0 20px 20px; display: flex; gap: 10px;">
-                    <button class="btn project-detail-btn" data-project-id="agendelogo">Detalhes</button>
+                <img src="Insta_Agendelogo.png" alt="Agende Logo">
+                <h3>Agende Logo</h3>
+                <p>Gestão de Fluxo e Agendamento Inteligente[cite: 101].</p>
+                <div class="project-links" style="display: flex; gap: 8px; padding: 0 15px 15px;">
+                    <button class="btn project-detail-btn" data-project-id="agendelogo">Info</button>
+                    <a href="https://agendelogo.com/" target="_blank" class="btn secondary"><i class="fas fa-globe"></i> Site</a>
                     <a href="https://www.instagram.com/agendelogo" target="_blank" class="btn secondary"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
             <div class="project-card">
-                <img src="assets/Insta_eloeterno.png" alt="Elo Eterno">
-                <h3>Elo eterno - Legado Digital</h3>
-                <p>Preservação de Memória Digital via QR Code e IA Generativa[cite: 106, 108].</p>
-                <div style="margin: 0 20px 20px; display: flex; gap: 10px;">
-                    <button class="btn project-detail-btn" data-project-id="eloeterno">Detalhes</button>
+                <img src="Insta_eloeterno.png" alt="Elo Eterno">
+                <h3>Elo Eterno</h3>
+                <p>Memoriais digitais via QR Code e IA[cite: 107, 108].</p>
+                <div class="project-links" style="display: flex; gap: 8px; padding: 0 15px 15px;">
+                    <button class="btn project-detail-btn" data-project-id="eloeterno">Info</button>
+                    <a href="https://eloeterno.com/" target="_blank" class="btn secondary"><i class="fas fa-globe"></i> Site</a>
                     <a href="https://www.instagram.com/elo_eterno.ofic/" target="_blank" class="btn secondary"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
@@ -246,37 +151,6 @@
         </div>
     </section>
 
-    <section id="education" class="education-section">
-        <h2>Formação Acadêmica e Cursos</h2>
-        <div class="education-grid">
-            <div class="education-column">
-                <h3>Formação Acadêmica</h3>
-                <div class="education-item"><h4>MBA em Gestão Avançada</h4><p>Unigranrio - Concluído [cite: 13]</p></div>
-                <div class="education-item"><h4>Graduação em ADS</h4><p>Anhanguera - Concluído [cite: 15]</p></div>
-                <div class="education-item"><h4>Graduação em Logística</h4><p>Unigranrio - Concluído [cite: 11]</p></div>
-            </div>
-            <div class="education-column">
-                <h3>Atividades Complementares</h3>
-                <div class="education-item"><h4>Excel (Vários Níveis)</h4><p>Hashtag Treinamentos / Magalu [cite: 36, 39, 42]</p></div>
-                <div class="education-item"><h4>SQL Impressionador</h4><p>Hashtag Treinamentos [cite: 44, 46]</p></div>
-                <div class="education-item"><h4>Power BI Impressionador</h4><p>Hashtag Treinamentos [cite: 53]</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <h2>Entre em Contato</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <p><i class="fas fa-phone"></i> (21) 96804-7036 [cite: 3]</p>
-                <p><i class="fas fa-envelope"></i> gustavo.briorlando00@gmail.com [cite: 3]</p>
-                <div class="social-links"><a href="https://www.linkedin.com/in/gustavo-briorlando-91b7721aa/" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
-            </div>
-            <div class="contact-form"><form><input type="text" placeholder="Nome" required><input type="email" placeholder="Email" required><textarea placeholder="Mensagem" rows="5" required></textarea><button type="submit" class="btn primary">Enviar</button></form></div>
-        </div>
-    </section>
-
-    <footer class="main-footer"><p>&copy; 2026 Gustavo Briorlando. Todos os direitos reservados.</p></footer>
     <script src="script.js" defer></script>
 </body>
 </html>
