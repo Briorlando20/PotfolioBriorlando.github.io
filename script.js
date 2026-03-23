@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Menu Hambúrguer (Responsividade)
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -8,17 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.classList.toggle('active');
     });
 
-    // Fechar menu ao clicar em um link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-            }
-        });
-    });
-
-    // Modais de Projeto
     const projectModal = document.getElementById('projectModal');
     const closeButton = document.querySelector('.close-button');
     const projectDetailButtons = document.querySelectorAll('.project-detail-btn');
@@ -27,49 +15,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const projectsData = {
         agendelogo: {
-            title: "Agende Logo | Founder & Lead Developer",
+            title: "Agende Logo | Founder & Developer",
             content: `
-                <p><strong>Sentido de Existência:</strong> Resolver o caos de filas e a ociosidade de profissionais através do agendamento automatizado, eliminando falhas do WhatsApp.</p>
-                <p><strong>Tecnologia & IA:</strong> Uso de LLMs para automação de atendimento e análise preditiva para sugestão de horários de maior conversão.</p>
-                <p><strong>O que vende:</strong> Automação 24/7, dashboards de performance e lembretes inteligentes para reduzir no-shows.</p>
+                <p><strong>O que é:</strong> Plataforma de Gestão de Fluxo para resolver caos de filas e ociosidade de profissionais[cite: 101, 102].</p>
+                <p><strong>Como funciona:</strong> Automação de reservas 24/7 com uso de LLMs (IA) para atendimento e triagem[cite: 102, 103].</p>
+                <p><strong>Impacto:</strong> Análise preditiva para sugerir horários de maior conversão e redução drástica de no-shows[cite: 104].</p>
             `
         },
         eloeterno: {
-            title: "ELOeterno | Co-founder & Arquiteto de Soluções",
+            title: "ELOeterno | Co-founder & Arquiteto",
             content: `
-                <p><strong>Sentido de Existência:</strong> Garantir que legados não se percam, unindo homenagens físicas (QR Code) a memoriais digitais interativos.</p>
-                <p><strong>Tecnologia & IA:</strong> Uso de IA Generativa para estruturação de narrativas biográficas a partir de dados brutos.</p>
-                <p><strong>Arquitetura:</strong> Desenvolvimento completo desde a interface HTML/CSS até a camada de dados em SQL.</p>
+                <p><strong>Sentido:</strong> Criar uma ponte entre o físico e digital para homenagens via QR Code[cite: 106, 107].</p>
+                <p><strong>IA Aplicada:</strong> Uso de IA Generativa para estruturação de narrativas biográficas personalizadas[cite: 108].</p>
+                <p><strong>Stack:</strong> Ciclo completo desde a interface HTML/CSS até a camada de dados em SQL[cite: 109].</p>
             `
         },
         projeto1: {
-            title: "Otimização de Layout de CD - Magazine Luiza",
+            title: "Layout CD - Magazine Luiza",
             content: `
-                <p><strong>Desafio:</strong> Otimizar o layout de um Centro de Distribuição de 55 mil m³ para aumentar a eficiência da área de picking.</p>
-                <p><strong>Minha Contribuição:</strong> Implementei mudanças estratégicas no layout, utilizei KANBAN e análise de Curva ABC.</p>
-                <p><strong>Ferramentas:</strong> Power BI, Excel, WMS e ORACLE.</p>
+                <p><strong>Escopo:</strong> Gestão de 55 mil m³ focada em eficiência de picking[cite: 96].</p>
+                <p><strong>Ações:</strong> Uso de KANBAN e análise de Curva ABC para otimização de endereços[cite: 96].</p>
             `
         },
         projeto2: {
-            title: "Análise de Indicadores Logísticos com Power BI/SQL",
+            title: "Indicadores Power BI/SQL",
             content: `
-                <p><strong>Desafio:</strong> Fornecer visibilidade sobre indicadores de recebimento, estoque e suprimentos.</p>
-                <p><strong>Minha Contribuição:</strong> Atualização diária de indicadores transformando dados brutos em insights para a diretoria.</p>
-                <p><strong>Ferramentas:</strong> SQL, Power BI e BigQuery.</p>
+                <p><strong>Ação:</strong> Atualização diária de indicadores de recebimento e estoque para diretoria[cite: 85].</p>
+                <p><strong>Técnica:</strong> Extração de dados via SQL e BigQuery para dashboards gerenciais[cite: 89, 98].</p>
             `
         },
         projeto3: {
-            title: "Controle Orçamentário e Gestão de Fornecedores",
+            title: "Controle Orçamentário",
             content: `
-                <p><strong>Desafio:</strong> Gerenciar o controle financeiro de serviços essenciais.</p>
-                <p><strong>Minha Contribuição:</strong> Controle de pagamentos (energia, água, fretado) e gestão direta com fornecedores.</p>
+                <p><strong>Gestão:</strong> Controle financeiro de serviços como energia, água e manutenção predial[cite: 90].</p>
+                <p><strong>Interface:</strong> Contato direto com fornecedores para garantir conformidade dos serviços[cite: 91].</p>
             `
         },
         projeto4: {
-            title: "Implantação de Equipamentos e Processos FULFILLMENT",
+            title: "Fulfillment - Magazine Luiza",
             content: `
-                <p><strong>Desafio:</strong> Implantar estruturas para operação Fulfillment.</p>
-                <p><strong>Minha Contribuição:</strong> Domínio dos processos logísticos relacionados a fornecedores parceiros.</p>
+                <p><strong>Implantação:</strong> Estruturação de equipamentos para armazenagem Fulfillment[cite: 97].</p>
+                <p><strong>Processos:</strong> Domínio da logística relacionada a fornecedores parceiros[cite: 97].</p>
             `
         }
     };
@@ -86,29 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    closeButton.addEventListener('click', () => {
-        projectModal.style.display = 'none';
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target === projectModal) {
-            projectModal.style.display = 'none';
-        }
-    });
-
-    // Animação barras de progresso
-    const skillBars = document.querySelectorAll('.progress-fill');
-    const skillsSection = document.getElementById('skills');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                skillBars.forEach(bar => {
-                    // Transição acionada pelo CSS
-                });
-            }
-        });
-    }, { threshold: 0.5 });
-
-    if (skillsSection) observer.observe(skillsSection);
+    closeButton.addEventListener('click', () => { projectModal.style.display = 'none'; });
+    window.addEventListener('click', (e) => { if (e.target === projectModal) projectModal.style.display = 'none'; });
 });
