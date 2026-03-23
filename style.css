@@ -1,5 +1,3 @@
-/* css/style.css */
-
 /* Variáveis CSS */
 :root {
     --primary-color: #000017; /* Azul para destaque */
@@ -371,11 +369,11 @@ h1, h2, h3 {
     transition: width 1s ease-out;
 }
 
-/* Exemplos de preenchimento para as barras - estas porcentagens precisam ser definidas por você */
+/* Exemplos de preenchimento para as barras */
 .progress-fill.excel { width: 95%; }
 .progress-fill.sql { width: 85%; }
 .progress-fill.powerbi { width: 90%; }
-.progress-fill.htmlcss { width: 70%; } /* Ajuste de acordo com seu nível */
+.progress-fill.htmlcss { width: 70%; }
 .progress-fill.datastudio { width: 80%; }
 .progress-fill.powerpoint { width: 90%; }
 .progress-fill.erp { width: 75%; }
@@ -480,7 +478,7 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
-#modalBody img, #modalBody iframe {
+#modalBody img {
     max-width: 100%;
     height: auto;
     display: block;
