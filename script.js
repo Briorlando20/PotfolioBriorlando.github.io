@@ -2,10 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Menu Hambúrguer
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
+
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    }
 
     // Modais de Projeto
     const projectModal = document.getElementById('projectModal');
@@ -18,33 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
         agendelogo: {
             title: "Agende Logo | Founder & Lead Developer",
             content: `
-                <p><strong>Solução:</strong> Automação de reservas 24/7 e dashboards de performance para redução de ociosidade[cite: 102].</p>
-                <p><strong>Tecnologia & IA:</strong> Desenvolvimento integrado a LLMs para automação de atendimento e triagem de clientes[cite: 103].</p>
-                <p><strong>Impacto:</strong> Análise preditiva para sugestão de horários de maior conversão e redução de no-shows[cite: 104].</p>
+                <p><strong>Propósito:</strong> Resolver o caos de filas e ociosidade de horários[cite: 102].</p>
+                <p><strong>Tecnologia:</strong> Uso de LLMs para automação de atendimento e análise preditiva de conversão[cite: 103, 104].</p>
+                <p><strong>Destaque:</strong> Automação 24/7 que reduz drasticamente o no-show[cite: 104].</p>
             `
         },
         eloeterno: {
-            title: "ELOeterno | Co-founder & Arquiteto de Soluções",
+            title: "ELOeterno | Arquiteto de Soluções",
             content: `
-                <p><strong>Solução:</strong> Memoriais digitais interativos acessíveis via QR Code em suportes físicos[cite: 107].</p>
-                <p><strong>Tecnologia & IA:</strong> Uso de IA Generativa para estruturação de narrativas biográficas e curadoria de dados[cite: 108].</p>
-                <p><strong>Arquitetura:</strong> Ciclo completo desde interface (HTML/CSS) até a camada de dados (SQL)[cite: 109].</p>
+                <p><strong>Propósito:</strong> Criar ponte entre o físico e digital para legados históricos[cite: 106].</p>
+                <p><strong>Tecnologia:</strong> IA Generativa para narrativas personalizadas e integração via QR Code[cite: 107, 108].</p>
+                <p><strong>Stack:</strong> SQL para arquitetura de dados e interface em HTML/CSS[cite: 109].</p>
             `
         },
         projeto1: {
-            title: "Otimização de Layout de CD - Magazine Luiza",
+            title: "Otimização de Layout - Magalu",
             content: `
-                <p><strong>Desafio:</strong> Otimizar layout de 55 mil m³ para aumentar eficiência de picking[cite: 96].</p>
-                <p><strong>Minha Contribuição:</strong> Uso de KANBAN e análise de Curva ABC para otimização de endereços[cite: 96].</p>
-                <p><strong>Ferramentas:</strong> WMS, ORACLE, SQL e Power BI[cite: 92, 98].</p>
-            `
-        },
-        projeto2: {
-            title: "Análise de Indicadores Logísticos com Power BI/SQL",
-            content: `
-                <p><strong>Desafio:</strong> Visibilidade de indicadores de recebimento e estoque[cite: 85].</p>
-                <p><strong>Contribuição:</strong> Tratativa de malha fiscal e atualização de indicadores diários[cite: 85, 87].</p>
-                <p><strong>Ferramentas:</strong> SQL Analítico, BigQuery e Data Studio[cite: 47, 98].</p>
+                <p><strong>Gestão:</strong> Operação em 55 mil m² com foco em eficiência de picking[cite: 96].</p>
+                <p><strong>Metodologia:</strong> Aplicação de KANBAN e Curva ABC[cite: 96].</p>
             `
         }
     };
@@ -61,6 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    closeButton.addEventListener('click', () => { projectModal.style.display = 'none'; });
-    window.addEventListener('click', (event) => { if (event.target === projectModal) projectModal.style.display = 'none'; });
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            projectModal.style.display = 'none';
+        });
+    }
+
+    window.addEventListener('click', (event) => {
+        if (event.target === projectModal) {
+            projectModal.style.display = 'none';
+        }
+    });
 });
